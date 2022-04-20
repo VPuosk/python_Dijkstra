@@ -7,7 +7,7 @@ class KekoOlio:
         self.olio = olio
         self.arvo = vertailu
 
-# Varsinainen keko (minimikeko)
+# Varsinainen keko
 class Keko:
     def __repr__(self):
         return "Keko()"
@@ -19,7 +19,7 @@ class Keko:
         self.kekoLista = [ 0 ]
         self.keonKoko = 0
 
-    # Palauttaa seon ensimmäisen arvon
+    # Palauttaa keon ensimmäisen arvon
     # poistaa ko. arvon keosta ja aloittaa
     # keon uudelleen järjestämisen.
     def otaEnsimmäinen(self):
@@ -39,7 +39,7 @@ class Keko:
 
     # Järjestää keon alhaalta ylöspäin
     # Eli suurista indeksiarvoista pieniin
-    # pieniin indeksiarvoihin
+    # indeksiarvoihin
     def jarjestaYlos(self, indeksi):
         uusiIndeksi = int(indeksi / 2)
 
@@ -50,8 +50,8 @@ class Keko:
             self.vaihda(indeksi, uusiIndeksi)
             self.jarjestaYlos(uusiIndeksi)
 
-    # Lisää kekoon uuden kekoolion, tarvittaessa
-    # luo uuden olin ja pidentää keon rungon
+    # Lisää kekoon uuden keko-olion, tarvittaessa
+    # luo uuden olion ja pidentää keon rungon
     # muodostavaa taulukkoa. Aloittaa keon
     # uudelleen järjestyksen
     def lisääUusi(self, olio, vertailu):
@@ -67,7 +67,7 @@ class Keko:
             self.kekoLista[self.keonKoko] = uusiOlio
             self.jarjestaYlos(self.keonKoko)       
 
-    # Järjestää keokoa pienestä indeksiarvosta suuria
+    # Järjestää kekoa pienistä indeksiarvoista suuria
     # indeksiarvoja kohden
     def jarjestaAlas(self, indeksi):
         alempiIndeksi = indeksi * 2
